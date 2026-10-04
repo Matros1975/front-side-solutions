@@ -5,59 +5,162 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Frontside Solutions B.V. — Technology consultancy</title>
 <meta name="description" content="Frontside Solutions B.V. is a technology consultancy working where domains cross: blockchain, business process automation and AI integration, VoIP, and technology strategy.">
+<meta name="theme-color" content="#0f3b36">
+<meta property="og:title" content="Frontside Solutions B.V. — Technology consultancy">
+<meta property="og:description" content="Technology consultancy where domains cross: blockchain, automation and AI, VoIP, and technology strategy.">
+<meta property="og:image" content="https://front-side-solutions.com/img/andrei-og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap">
+<link rel="preload" as="image" href="img/andrei-710.webp" imagesrcset="img/andrei-440.webp 440w, img/andrei-710.webp 710w" imagesizes="(min-width:46rem) 416px, 72vw">
 <style>
-:root{color-scheme:light dark;--bg:#fbfbfa;--fg:#14171c;--mute:#5c6470;--rule:#e3e4e2;--accent:#0b6e5a;--accent-soft:#e6f2ef}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1214;--fg:#eceeed;--mute:#9aa3ab;--rule:#262b30;--accent:#4cc3a6;--accent-soft:#14251f}}
+:root{color-scheme:light dark;--bg:oklch(.985 .004 180);--fg:oklch(.21 .02 200);--mute:oklch(.44 .02 200);--rule:oklch(.9 .01 190);--accent:oklch(.45 .08 178);--deep:oklch(.31 .055 178);--deep-fg:oklch(.97 .012 170);--deep-mute:oklch(.84 .03 175);--deep-rule:oklch(.42 .05 178);--copper:oklch(.8 .11 58);--copper-ink:oklch(.24 .04 50);--ease:cubic-bezier(.16,1,.3,1)}
+@media (prefers-color-scheme:dark){:root{--bg:oklch(.17 .012 190);--fg:oklch(.94 .008 180);--mute:oklch(.74 .015 185);--rule:oklch(.28 .015 190);--accent:oklch(.8 .09 172);--deep:oklch(.26 .045 178);--deep-rule:oklch(.36 .045 178)}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",system-ui,sans-serif;-webkit-text-size-adjust:100%}
-.wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
-header{padding:1.75rem 0;border-bottom:1px solid var(--rule)}
-.brand{font-weight:650;letter-spacing:-.01em;font-size:1.05rem}
-.brand span{color:var(--accent)}
-.hero{padding:4rem 0 3rem}
-h1{font-size:clamp(2rem,5vw,3rem);line-height:1.1;letter-spacing:-.025em;margin:0 0 1.25rem;text-wrap:balance}
-h1 em{font-style:normal;color:var(--accent)}
-.lede{font-size:1.2rem;color:var(--mute);max-width:36rem;margin:0}
-h2{font-size:1.35rem;letter-spacing:-.01em;margin:0 0 1.25rem}
-section{padding:2.75rem 0;border-top:1px solid var(--rule)}
-.services{display:grid;gap:1.75rem}
-.services dt{font-weight:600;font-size:1.05rem}
-.services dd{margin:.35rem 0 0;color:var(--mute)}
-a{color:var(--accent);text-underline-offset:.18em}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-.contact a.mail{display:inline-block;margin-top:.25rem;padding:.65rem 1rem;border-radius:.5rem;background:var(--accent-soft);text-decoration:none;font-weight:600}
-footer{padding:2rem 0 3rem;border-top:1px solid var(--rule);color:var(--mute);font-size:.875rem}
-footer p{margin:.2rem 0}
-@media (min-width:44rem){.services{grid-template-columns:1fr 1fr;column-gap:2.5rem}}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1.0625rem/1.6 "Schibsted Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;-webkit-text-size-adjust:100%;text-rendering:optimizeLegibility}
+.wrap{max-width:72rem;margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
+a{color:var(--accent);text-underline-offset:.2em;text-decoration-thickness:1px}
+a:focus-visible,.btn:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:.25rem}
+.skip{position:absolute;left:1rem;top:-3rem;padding:.5rem .75rem;background:var(--copper);color:var(--copper-ink);border-radius:.25rem;z-index:10}
+.skip:focus{top:1rem}
+
+.top{background:var(--deep);color:var(--deep-fg);overflow:hidden}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 0}
+.brand{font-weight:800;letter-spacing:-.015em;font-size:1.125rem;color:inherit;text-decoration:none}
+.brand span{color:var(--copper)}
+.bar nav a{color:var(--deep-fg);font-weight:500;text-decoration:none;border-bottom:1px solid var(--deep-rule);padding-bottom:.15rem;transition:border-color .3s var(--ease)}
+.bar nav a:hover{border-color:var(--copper)}
+
+.hero{display:grid;gap:2.5rem;padding-top:clamp(2rem,6vw,4.5rem)}
+.hero-copy{align-self:center;padding-bottom:clamp(0rem,4vw,4rem)}
+h1{font-size:clamp(2.4rem,5.6vw,4.4rem);font-weight:800;line-height:1.02;letter-spacing:-.03em;margin:0 0 1.5rem;text-wrap:balance;max-width:15ch}
+h1 em{font-style:normal;color:var(--copper)}
+.lede{font-size:clamp(1.125rem,1.6vw,1.3rem);line-height:1.55;color:var(--deep-mute);max-width:34rem;margin:0 0 2rem;text-wrap:pretty}
+.domains{display:flex;flex-wrap:wrap;gap:.4rem clamp(.4rem,1.6vw,.7rem);list-style:none;margin:0 0 2.25rem;padding:0;font-weight:500;font-size:clamp(.8rem,3.4vw,.95rem);white-space:nowrap}
+.domains li+li::before{content:"×";color:var(--copper);margin-right:clamp(.4rem,1.6vw,.7rem);font-weight:700}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.35rem;border-radius:999px;background:var(--copper);color:var(--copper-ink);font-weight:700;text-decoration:none;transition:transform .4s var(--ease),background-color .3s var(--ease)}
+.btn svg{transition:transform .4s var(--ease)}
+.btn:hover{background:oklch(.85 .1 62)}
+.btn:hover svg{transform:translateX(3px)}
+
+.portrait{margin:0;justify-self:center;align-self:end;position:relative;width:min(72vw,22rem)}
+.portrait img{display:block;width:100%;height:auto;aspect-ratio:710/1053;object-fit:cover;border-radius:.75rem .75rem 0 0}
+.portrait figcaption{position:absolute;left:1rem;bottom:1rem;padding:.55rem .85rem;border-radius:.5rem;background:oklch(.22 .04 180 / .88);color:var(--deep-fg);font-size:.875rem;line-height:1.3}
+.portrait figcaption b{display:block;font-weight:700;font-size:.95rem}
+
+main section{padding:clamp(3.5rem,8vw,6.5rem) 0}
+h2{font-size:clamp(1.75rem,3.4vw,2.6rem);font-weight:800;letter-spacing:-.025em;line-height:1.1;margin:0;text-wrap:balance}
+.services{display:grid;gap:2.5rem}
+.services-head{align-self:start}
+.services-head p{color:var(--mute);margin:1rem 0 0;max-width:24rem;text-wrap:pretty}
+.services dl{margin:0;border-top:1px solid var(--rule)}
+.services dl>div{display:grid;gap:.4rem 2rem;padding:1.6rem 0;border-bottom:1px solid var(--rule)}
+.services dt{font-weight:700;font-size:clamp(1.2rem,2vw,1.45rem);letter-spacing:-.015em;line-height:1.25}
+.services dd{margin:0;color:var(--mute);max-width:36rem;text-wrap:pretty}
+
+.contact{padding:0;background:var(--deep);color:var(--deep-fg)}
+.contact-inner{display:grid;gap:2rem;padding-block:clamp(3.5rem,8vw,6rem)}
+.contact h2{max-width:16ch}
+.contact p{color:var(--deep-mute);font-size:1.15rem;max-width:30rem;margin:1rem 0 0;text-wrap:pretty}
+.mail{font-size:clamp(1.2rem,3vw,2rem);font-weight:700;letter-spacing:-.02em;color:var(--deep-fg);text-decoration-color:var(--copper);text-decoration-thickness:2px;text-underline-offset:.25em;overflow-wrap:anywhere;transition:color .3s var(--ease)}
+.mail:hover{color:var(--copper)}
+.sign{display:flex;align-items:center;gap:.9rem;margin-top:1.75rem}
+.sign img{width:3.5rem;height:3.5rem;border-radius:50%;object-fit:cover}
+.sign span{font-size:.95rem;line-height:1.35;color:var(--deep-mute)}
+.sign b{display:block;color:var(--deep-fg);font-weight:700}
+
+footer{padding:2.25rem 0 3rem;color:var(--mute);font-size:.875rem}
+footer .wrap{display:grid;gap:.35rem}
+footer p{margin:0}
+
+@media (min-width:44rem){
+.services dl>div{grid-template-columns:minmax(12rem,2fr) 3fr}
+}
+@media (min-width:46rem){
+.hero{grid-template-columns:1.25fr .75fr;gap:clamp(2rem,4vw,3rem)}
+.portrait{width:100%;max-width:26rem;justify-self:end}
+}
+@media (min-width:56rem){
+.services{grid-template-columns:1fr 2fr;gap:4rem}
+.services-head{position:sticky;top:2.5rem}
+.contact-inner{grid-template-columns:1fr 1fr;align-items:end}
+footer .wrap{grid-template-columns:auto auto;justify-content:space-between;column-gap:2rem}
+}
+
+@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+@keyframes unveil{from{clip-path:inset(100% 0 0 0 round .75rem .75rem 0 0)}to{clip-path:inset(0 0 0 0 round .75rem .75rem 0 0)}}
+@keyframes settle{from{transform:scale(1.08)}}
+@media (prefers-reduced-motion:no-preference){
+.hero-copy>*{animation:rise .9s var(--ease) both}
+.hero-copy>:nth-child(2){animation-delay:.08s}
+.hero-copy>:nth-child(3){animation-delay:.16s}
+.hero-copy>:nth-child(4){animation-delay:.24s}
+.portrait{animation:unveil 1.2s var(--ease) .1s both}
+.portrait img{animation:settle 1.6s var(--ease) .1s both}
+.portrait figcaption{animation:rise .8s var(--ease) .9s both}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<header><div class="wrap"><div class="brand">Frontside Solutions<span>.</span></div></div></header>
-<main class="wrap">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="wrap">
+<div class="bar">
+<a class="brand" href="/">Frontside Solutions<span>.</span></a>
+<nav aria-label="Primary"><a href="#contact">Contact</a></nav>
+</div>
 <div class="hero">
+<div class="hero-copy">
 <h1>Technology consultancy where domains <em>cross</em>.</h1>
 <p class="lede">Frontside Solutions helps organisations make sound technology decisions and turn them into working systems, especially where blockchain, automation, AI and communications meet.</p>
+<ul class="domains" aria-label="Areas of work">
+<li>Blockchain</li><li>Automation &amp; AI</li><li>VoIP</li><li>Strategy</li>
+</ul>
+<a class="btn" href="mailto:info@front-side-solutions.com">Start a conversation <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div>
+<figure class="portrait">
+<img src="img/andrei-710.webp" srcset="img/andrei-440.webp 440w, img/andrei-710.webp 710w" sizes="(min-width:46rem) 416px, 72vw" width="710" height="1053" alt="Andrei Khrustaleu, founder of Frontside Solutions, arms folded in front of a brick wall" fetchpriority="high">
+<figcaption><b>Andrei Khrustaleu</b>Founder</figcaption>
+</figure>
+</div>
+</div>
+</header>
 
+<main id="main">
 <section aria-labelledby="services">
+<div class="wrap services">
+<div class="services-head">
 <h2 id="services">What we do</h2>
-<dl class="services">
+<p>Four areas, often in the same project. The value is usually in how they connect.</p>
+</div>
+<dl>
 <div><dt>Blockchain</dt><dd>Public blockchains and permissioned networks such as Hyperledger: architecture, integration and an honest view on where a ledger adds value.</dd></div>
 <div><dt>Process automation &amp; AI integration</dt><dd>Automating business processes end to end and integrating AI where it measurably saves time or improves quality.</dd></div>
 <div><dt>VoIP consultancy</dt><dd>Design, migration and integration of voice and telephony platforms with the rest of your systems.</dd></div>
 <div><dt>Technology strategy</dt><dd>Independent advice on architecture, vendor and build-or-buy decisions, and on roadmaps that hold up in practice.</dd></div>
 </dl>
+</div>
 </section>
-<section class="contact" aria-labelledby="contact">
-<h2 id="contact">Contact</h2>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+<div class="wrap contact-inner">
+<div>
+<h2 id="contact-h">Working on something that crosses domains?</h2>
 <p>Tell us briefly what you are working on, and we will get back to you.</p>
+</div>
+<div>
 <a class="mail" href="mailto:info@front-side-solutions.com">info@front-side-solutions.com</a>
+<div class="sign"><img src="img/andrei-face.webp" width="192" height="192" alt="" loading="lazy"><span><b>Andrei Khrustaleu</b>Founder, Frontside Solutions B.V.</span></div>
+</div>
+</div>
 </section>
 </main>
+
 <footer><div class="wrap">
-<p>&copy; 2026 Frontside Solutions B.V., the Netherlands.</p>
+<p>&copy; 2026 Frontside Solutions B.V., the Netherlands · <span style="white-space:nowrap">KvK 85332003</span></p>
 <p>We also make <a href="https://hopfocus.front-side-solutions.com/">HopFocus</a>, a small utility for Mac users with more than one display.</p>
-<p>Chamber of Commerce (KvK): 85332003</p>
 </div></footer>
 </body>
 </html>
